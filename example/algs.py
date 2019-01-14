@@ -18,7 +18,6 @@ def bubblesort(x):
                     x[j] = x[j+1]
                     # replacig second value with first(larger) value
                     x[j+1] = temp
-    assert 1 == 1
     return x
 
 # the partition function will partition a list around a pivotvalue one time
@@ -66,5 +65,4 @@ def runqsort(x, start, end):
 
 def quicksort(x):
     runqsort(x, 0, (len(x)-1))
-    assert 1 == 1
     return x

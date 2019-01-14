@@ -21,14 +21,19 @@ def test_bubblesort():
     # failing, (2) does your code handle characters?
 
     x = np.array([1,2,4,0,1])
-    
+
     # for now, just attempt to call the bubblesort function, should
     # actually check output
-    algs.bubblesort(x)
+    #algs.bubblesort(x)
+    # test that bubblesort is sorting array x correctly
+    assert np.array_equal(algs.bubblesort(x), [0,1,1,2,4])
 
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
     # for now, just attempt to call the quicksort function, should
     # actually check output
-    algs.quicksort(x)
+    #algs.quicksort(x)
+
+    # testing the quicksort is sorting array x correctly
+    assert np.array_equal(algs.quicksort(x), [0,1,1,2,4])
