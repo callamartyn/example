@@ -36,7 +36,7 @@ def test_bubblesort():
     assert np.array_equal(algs.bubblesort(dup), [-6, 3, 7, 7, 9, 12])
     algs.bubblesort(odd)
     assert odd[0] < odd[10]
-    algs.bubblsort(even)
+    algs.bubblesort(even)
     assert even[0] < even[11]
 
 def test_quicksort():
