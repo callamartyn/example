@@ -21,12 +21,23 @@ def test_bubblesort():
     # failing, (2) does your code handle characters?
 
     x = np.array([1,2,4,0,1])
-
+    empty = []
+    single = [11]
+    dup = [3, 12, 7, 7, -6, 9]
+    odd = np.random.rand(11)
+    even = np.random.rand(12)
     # for now, just attempt to call the bubblesort function, should
     # actually check output
     #algs.bubblesort(x)
     # test that bubblesort is sorting array x correctly
     assert np.array_equal(algs.bubblesort(x), [0,1,1,2,4])
+    assert np.array_equal(algs.bubblesort(empty), [])
+    assert np.array_equal(algs.bubblesort(single), [11])
+    assert np.array_equal(algs.bubblesort(dup), [-6, 3, 7, 7, 9, 12])
+    algs.bubblesort(odd)
+    assert odd[0] < odd[10]
+    algs.bubblsort(even)
+    assert even[0] < even[11]
 
 def test_quicksort():
 
