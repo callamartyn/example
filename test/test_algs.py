@@ -31,6 +31,8 @@ def test_bubblesort():
     #algs.bubblesort(x)
     # test that bubblesort is sorting array x correctly
     assert np.array_equal(algs.bubblesort(x), [0,1,1,2,4])
+    # testing additional edge cases; empty, single element, duplicated
+    # element, odd and even length vectors
     assert np.array_equal(algs.bubblesort(empty), [])
     assert np.array_equal(algs.bubblesort(single), [11])
     assert np.array_equal(algs.bubblesort(dup), [-6, 3, 7, 7, 9, 12])
@@ -42,9 +44,24 @@ def test_bubblesort():
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
+    empty = []
+    single = [11]
+    dup = [3, 12, 7, 7, -6, 9]
+    odd = np.random.rand(11)
+    even = np.random.rand(12)
     # for now, just attempt to call the quicksort function, should
     # actually check output
     #algs.quicksort(x)
 
     # testing the quicksort is sorting array x correctly
     assert np.array_equal(algs.quicksort(x), [0,1,1,2,4])
+    # testing additional edge cases; empty, single element, duplicated
+    # element, odd and even length vectors
+    assert np.array_equal(algs.quicksort(x), [0,1,1,2,4])
+    assert np.array_equal(algs.quicksort(empty), [])
+    assert np.array_equal(algs.quicksort(single), [11])
+    assert np.array_equal(algs.quicksort(dup), [-6, 3, 7, 7, 9, 12])
+    algs.quicksort(odd)
+    assert odd[0] < odd[10]
+    algs.quicksort(even)
+    assert even[0] < even[11]
