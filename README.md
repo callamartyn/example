@@ -36,3 +36,8 @@ python -m pytest
 ```
 
 from the root directory of this project.
+
+## time complexity test
+
+The jupyter notebook file contains altered versions of the sorting functions
+These versions track assignments, conditionals, and runtime
